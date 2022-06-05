@@ -12,7 +12,7 @@ const Layout = ({ children, title }) => {
 					name="description"
 					content="Bringing you the best events to any city"
 				/>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/favicon.ico" className="rounded-full" />
 			</Head>
 			<Header />
 			<main className="bg-[#000000]">

@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useRouter } from 'next/router';
 
 export const RSVPInput = ({ event }) => {
+	const router = useRouter();
 	const form = useRef();
 	const [emailAddress, setEmailAddress] = useState({
 		from_email: '',
@@ -26,12 +28,13 @@ export const RSVPInput = ({ event }) => {
 			.then(
 				(result) => {
 					console.log(result.text);
-					setEmailAddress('');
+					router.reload();
 				},
 				(error) => {
 					console.log(error.text);
 				}
 			);
+		setEmailAddress('');
 	};
 	return (
 		<form onSubmit={sendEmail}>
