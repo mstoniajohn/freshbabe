@@ -12,9 +12,9 @@ export default function Home() {
 					<h1 className="text-[#dfff94] text-3xl">Upcoming Events</h1>
 				</div>
 				<div className="container-md mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-					<EventCard />
-					<EventCard />
-					<EventCard />
+					<EventCard title="Fresh Event 1" />
+					<EventCard title="Fresh Event 2" />
+					<EventCard title="Fresh Event 3" />
 				</div>
 			</div>
 		</Layout>
