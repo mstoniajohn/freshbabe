@@ -49,7 +49,7 @@ export const RSVPInput = ({ event }) => {
 
 			<button
 				type="submit"
-				className="mt-2 w-full bg-[#dfff94] rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-gray-dark"
+				className="mt-3 w-full bg-[#dfff94] rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-gray-dark"
 			>
 				RSVP Now
 			</button>

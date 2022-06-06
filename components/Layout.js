@@ -7,7 +7,7 @@ const Layout = ({ children, title }) => {
 	return (
 		<>
 			<Head>
-				<title>Fresh Babe</title>
+				<title>Fresh Babe | {title}</title>
 				<meta
 					name="description"
 					content="Bringing you the best events to any city"
@@ -15,11 +15,7 @@ const Layout = ({ children, title }) => {
 				<link rel="icon" href="/favicon.ico" className="rounded-full" />
 			</Head>
 			<Header />
-			<main className="bg-[#000000]">
-				{children}
-
-				{/* <code className={styles.code}>pages/index.js</code> */}
-			</main>
+			<main className="bg-[#000000]">{children}</main>
 			{/* <footer>
 				<a
 					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"

@@ -52,7 +52,8 @@ export default function Header() {
 										className="hidden md:block h-8 w-8  rounded-full"
 										src="/fb-logo.jpg"
 										alt="FreshBabe"
-									/>
+									/>{' '}
+									<span className="text-[#baca94] ml-1">Fresh Babe</span>
 								</div>
 								<div className="hidden sm:block sm:ml-6">
 									<div className="flex space-x-4">

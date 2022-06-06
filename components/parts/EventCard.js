@@ -1,11 +1,15 @@
 import React from 'react';
+import { getDate, urlFor } from '../../utils/getImageUrl';
 import { RSVPInput } from './RSVPInput';
+import { PortableText } from '@portabletext/react';
 
 const EventCard = ({
 	title = 'Fresh Event',
 	image = '/event1.jpg',
-	info = 'Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.',
-	subtitle = 'Finding customers for your new business',
+	info = '',
+	subtitle = '',
+	date = '',
+	time = '',
 }) => {
 	return (
 		<div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden lg:max-w-2xl text-[#fff]">
@@ -13,14 +17,17 @@ const EventCard = ({
 				<div className="lg:shrink-0">
 					<img
 						className="h-48 w-full object-cover lg:h-full lg:w-48"
-						src={image}
-						alt="Man looking at item at a store"
+						src={urlFor(image)}
+						alt="Fresh Babe Events"
 					/>
 				</div>
-				<div className="p-8">
+				<div className="py-3 md:p-6">
 					<div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
 						{title}
 					</div>
+					<p className="text-gray">
+						<span>{getDate(date)}</span> at <span>{time}</span>
+					</p>
 					{/* TODO: Link to event page? */}
 					<a
 						href="#"
@@ -28,7 +35,10 @@ const EventCard = ({
 					>
 						{subtitle}
 					</a>
-					<p className="mt-2 text-slate-500">{info}</p>
+					<div className="mt-2 mb-4 text-slate-500">
+						<PortableText value={info} />
+					</div>
+
 					<RSVPInput event={title} />
 				</div>
 			</div>
