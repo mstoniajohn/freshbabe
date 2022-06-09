@@ -5,7 +5,7 @@ import { PortableText } from '@portabletext/react';
 import Link from 'next/link';
 
 const EventCard = ({
-	title = 'Fresh Event',
+	title = '',
 	image = '/event1.jpg',
 	info = '',
 	subtitle = '',

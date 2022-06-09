@@ -8,7 +8,14 @@ import EventCard from '../../components/parts/EventCard';
 import sanity from '../../lib/sanity';
 
 const SingleEvent = ({
-	event: { title, slug, image, location, info, date },
+	event: {
+		title = '',
+		slug = '',
+		image = '',
+		location = '',
+		info = '',
+		date = '',
+	},
 }) => {
 	const router = useRouter();
 	const prev = router.back;
@@ -41,19 +48,20 @@ const SingleEvent = ({
 
 export default SingleEvent;
 
+const eventQ = `*[_type == "event" && slug.current == $slug][0]{
+	title,
+	info,
+	date,
+	location,
+	slug,
+	time,
+	image {
+	  ...asset->
+	}
+  }`;
 export const getStaticProps = async ({ params }) => {
 	const { slug } = params;
-	const eventQ = `*[_type == "event" && slug.current == $slug][0]{
-        title,
-        info,
-        date,
-        location,
-        slug,
-        time,
-        image {
-          ...asset->
-        }
-      }`;
+
 	const event = await sanity.fetch(eventQ, { slug });
 
 	console.log(event);
