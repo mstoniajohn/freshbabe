@@ -23,7 +23,7 @@ export const RSVPInput = ({ event }) => {
 				'default_service',
 				'template_a2g99tq',
 				emailAddress,
-				'Hg-h2p_kfiSBDH52E'
+				process.env.NEXT_PUBLIC_EMAILJS_KEY
 			)
 			.then(
 				(result) => {
@@ -43,13 +43,14 @@ export const RSVPInput = ({ event }) => {
 				name="from_email"
 				placeholder="Email Address"
 				value={emailAddress.from_email}
+				required
 				onChange={onChange}
 				className="mt-1 focus:ring-[#dfff94] focus:border-[#dfff94] block w-full shadow-sm sm:text-sm border-gray-300 rounded-md bg-[#000000ee]"
 			/>
 
 			<button
 				type="submit"
-				className="mt-3 w-full bg-[#dfff94] rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-gray-dark"
+				className="mt-3 bg-transparent rounded-xl py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-green border-2 hover:bg-green hover:text-gray-dark"
 			>
 				RSVP Now
 			</button>

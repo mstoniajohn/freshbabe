@@ -12,7 +12,7 @@ export default function Home({ events = [] }) {
 	console.log(events);
 	return (
 		<Layout title="Home">
-			<div className="container h-full pb-20">
+			<div className="container h-full pb-20 px-12">
 				<div className="flex h-screen w-full flex-col items-center justify-center space-y-3">
 					<h1 className="text-[#dfff94] text-3xl">Upcoming Events</h1>
 					<div className="animate-bounce text-green text-5xl">

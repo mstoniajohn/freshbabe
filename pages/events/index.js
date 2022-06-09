@@ -7,7 +7,7 @@ const Events = ({ events }) => {
 	console.log(events);
 	return (
 		<Layout>
-			<div className="flex h-full w-full flex-col items-center justify-center">
+			<div className="flex h-full w-full flex-col items-center justify-center container px-12">
 				<h1 className="text-xl  text-green">Upcoming events</h1>
 			</div>
 		</Layout>
