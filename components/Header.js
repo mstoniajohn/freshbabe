@@ -42,19 +42,21 @@ export default function Header() {
 								</Disclosure.Button>
 							</div>
 							<div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-								<div className="flex-shrink-0 flex items-center">
-									<img
-										className="block md:hidden h-8 w-8 rounded-full"
-										src="/fb-logo.jpg"
-										alt="FreshBabe"
-									/>
-									<img
-										className="hidden md:block h-8 w-8  rounded-full"
-										src="/fb-logo.jpg"
-										alt="FreshBabe"
-									/>{' '}
-									<span className="text-[#baca94] ml-1">Fresh Babe</span>
-								</div>
+								<Link href="/" passHref>
+									<a className="flex-shrink-0 flex items-center">
+										<img
+											className="block md:hidden h-8 w-8 rounded-full"
+											src="/fb-logo.jpg"
+											alt="FreshBabe"
+										/>
+										<img
+											className="hidden md:block h-8 w-8  rounded-full"
+											src="/fb-logo.jpg"
+											alt="FreshBabe"
+										/>{' '}
+										<span className="text-[#baca94] ml-1">Fresh Babe</span>
+									</a>
+								</Link>
 								<div className="hidden sm:block sm:ml-6">
 									<div className="flex space-x-4">
 										{navigation.map((item) => (

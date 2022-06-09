@@ -5,7 +5,7 @@ import Header from './Header';
 
 const Layout = ({ children, title }) => {
 	return (
-		<>
+		<div className="bg-[#000000]">
 			<Head>
 				<title>Fresh Babe | {title}</title>
 				<meta
@@ -28,7 +28,7 @@ const Layout = ({ children, title }) => {
 					</span>
 				</a>
 			</footer> */}
-		</>
+		</div>
 	);
 };
 

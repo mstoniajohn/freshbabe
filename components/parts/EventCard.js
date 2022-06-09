@@ -2,6 +2,7 @@ import React from 'react';
 import { getDate, urlFor } from '../../utils/getImageUrl';
 import { RSVPInput } from './RSVPInput';
 import { PortableText } from '@portabletext/react';
+import Link from 'next/link';
 
 const EventCard = ({
 	title = 'Fresh Event',
@@ -10,6 +11,7 @@ const EventCard = ({
 	subtitle = '',
 	date = '',
 	time = '',
+	slug = '',
 }) => {
 	return (
 		<div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden lg:max-w-2xl text-[#fff]">
@@ -22,9 +24,14 @@ const EventCard = ({
 					/>
 				</div>
 				<div className="py-3 md:p-6">
-					<div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-						{title}
-					</div>
+					<Link href={`events/${slug}`}>
+						<a>
+							<div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+								{title}
+							</div>
+						</a>
+					</Link>
+
 					<p className="text-gray">
 						<span>{getDate(date)}</span> at <span>{time}</span>
 					</p>

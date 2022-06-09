@@ -4,7 +4,6 @@ import EventCard from '../../components/parts/EventCard';
 import sanity from '../../lib/sanity';
 
 const Events = ({ events }) => {
-	console.log(events);
 	return (
 		<Layout>
 			<div className="flex h-full w-full flex-col items-center justify-center container px-12">
@@ -17,11 +16,12 @@ const Events = ({ events }) => {
 export default Events;
 
 // Create a query called homepageQuery
-const eventQuery = `*\[_type == "event"\][0] {
+const eventQuery = `*\[_type == "event"\]{
 	title,
 	info,
 	date,
 	location,
+	slug,
 	image {
 	  ...asset->
 	}
@@ -34,7 +34,7 @@ export async function getStaticProps() {
 	// 	  title
 	//   }
 	// `);
-	console.log(events);
+
 	return {
 		props: {
 			events,
