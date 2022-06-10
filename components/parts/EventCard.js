@@ -19,7 +19,7 @@ const EventCard = ({
 				<div className="lg:shrink-0">
 					<img
 						className="h-48 w-full object-cover lg:h-full lg:w-48"
-						src={urlFor(image)}
+						src={image !== '' && urlFor(image)}
 						alt="Fresh Babe Events"
 					/>
 				</div>
