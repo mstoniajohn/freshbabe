@@ -11,7 +11,7 @@ const SingleEvent = ({ event }) => {
 	const router = useRouter();
 	const prev = router.back;
 
-	console.log(event, event.image.url);
+	console.log(event, event?.image?.url);
 	return (
 		<Layout>
 			<ContainerDiv>
@@ -56,8 +56,6 @@ export const getStaticProps = async ({ params }) => {
 	const { slug } = params;
 
 	const event = await sanity.fetch(eventQ, { slug });
-
-	console.log(event);
 	return {
 		props: {
 			event,
