@@ -7,16 +7,7 @@ import Layout from '../../components/Layout';
 import EventCard from '../../components/parts/EventCard';
 import sanity from '../../lib/sanity';
 
-const SingleEvent = ({
-	event: {
-		title = '',
-		slug = '',
-		image = '',
-		location = '',
-		info = '',
-		date = '',
-	},
-}) => {
+const SingleEvent = ({ event }) => {
 	const router = useRouter();
 	const prev = router.back;
 
@@ -32,12 +23,12 @@ const SingleEvent = ({
 					</Link>
 					<div className="pb-20 pt-10">
 						<EventCard
-							title={title}
-							slug={slug}
-							image={image}
-							location={location}
-							info={info}
-							date={date}
+							title={event?.title}
+							slug={event?.slug.current}
+							image={event?.image}
+							location={event?.location}
+							info={event?.info}
+							date={event?.date}
 						/>
 					</div>
 				</div>
