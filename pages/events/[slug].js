@@ -22,14 +22,16 @@ const SingleEvent = ({ event }) => {
 						</a>
 					</Link>
 					<div className="pb-20 pt-10">
-						<EventCard
-							title={event?.title}
-							slug={event?.slug.current}
-							image={event?.image}
-							location={event?.location}
-							info={event?.info}
-							date={event?.date}
-						/>
+						{event && (
+							<EventCard
+								title={event?.title}
+								slug={event?.slug.current}
+								image={event?.image}
+								location={event?.location}
+								info={event?.info}
+								date={event?.date}
+							/>
+						)}
 					</div>
 				</div>
 			</ContainerDiv>

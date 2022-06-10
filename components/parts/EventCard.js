@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const EventCard = ({
 	title = '',
-	image = '',
+	image,
 	info = '',
 	subtitle = '',
 	date = '',
