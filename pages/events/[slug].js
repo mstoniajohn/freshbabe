@@ -11,7 +11,7 @@ const SingleEvent = ({ event }) => {
 	const router = useRouter();
 	const prev = router.back;
 
-	console.log(router);
+	console.log(event, event.image.url);
 	return (
 		<Layout>
 			<ContainerDiv>
