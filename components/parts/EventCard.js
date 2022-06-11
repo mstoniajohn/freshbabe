@@ -17,15 +17,19 @@ const EventCard = ({
 		<div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden lg:max-w-2xl text-[#fff]">
 			<div className="flex flex-col lg:flex-row">
 				<div className="lg:shrink-0">
-					<img
-						className="h-48 w-full object-cover lg:h-full lg:w-48"
-						src={image !== '' && urlFor(image)}
-						alt="Fresh Babe Events"
-					/>
+					<Link href={`events/${slug}`}>
+						<a className="cursor-pointer">
+							<img
+								className="h-48 w-full object-cover lg:h-full lg:w-48"
+								src={image !== '' && urlFor(image)}
+								alt="Fresh Babe Events"
+							/>
+						</a>
+					</Link>
 				</div>
 				<div className="py-3 md:p-6">
 					<Link href={`events/${slug}`}>
-						<a>
+						<a className="cursor-pointer">
 							<div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
 								{title}
 							</div>
