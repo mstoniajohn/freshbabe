@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import Layout from '@components/layout/Layout';
+import Layout from '@components/Layout';
 
 import { Container } from '@mui/system';
 
