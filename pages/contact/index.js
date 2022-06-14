@@ -114,7 +114,7 @@ const Contact = () => {
 													phone
 												</label>
 												<input
-													type="text"
+													type="tel"
 													name="phone"
 													onChange={onChange}
 													value={phone}

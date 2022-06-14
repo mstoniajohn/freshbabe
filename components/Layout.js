@@ -15,7 +15,7 @@ const Layout = ({ children, title }) => {
 				<link rel="icon" href="/favicon.ico" className="rounded-full" />
 			</Head>
 			<Header />
-			<main className="bg-[#000000] h-full">{children}</main>
+			<main className="bg-[#000000] h-full z-0">{children}</main>
 			{/* <footer>
 				<a
 					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"

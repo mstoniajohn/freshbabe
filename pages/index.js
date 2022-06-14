@@ -3,10 +3,9 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 import EventCard from '../components/parts/EventCard';
-import styles from '../styles/Home.module.css';
-import sanity from '../lib/sanity';
 import { motion } from 'framer-motion';
 import { TbArrowBottomCircle } from 'react-icons/tb';
+import client from '../lib/sanity';
 
 export default function Home({ events = [] }) {
 	return (
@@ -25,7 +24,7 @@ export default function Home({ events = [] }) {
 					Events
 				</h2>
 
-				<div className="container-md mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+				<div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
 					{events &&
 						events?.map(
 							({ title, info, time, date, image, location, slug }) => (
@@ -62,7 +61,7 @@ const eventQuery = `*\[_type == "event"\] {
   }`;
 
 export async function getStaticProps() {
-	const events = await sanity.fetch(eventQuery);
+	const events = await client.fetch(eventQuery);
 	// const events = await sanity.fetch(groq`
 	//   *[_type == "event"]{
 	// 	  title
