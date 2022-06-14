@@ -28,9 +28,9 @@ const Contact = () => {
 		emailjs
 			.send(
 				'default_service',
-				'template_cg0cbn3',
+				'template_jjk8awa',
 				postMessage,
-				`0los4Zw09Lh1XAn0t`
+				`Hg-h2p_kfiSBDH52E`
 			)
 			.then(
 				(result) => {
@@ -50,15 +50,18 @@ const Contact = () => {
 
 	return (
 		<Layout title="Contact">
-			<div className="px-12">
+			<div className="px-12 h-screen">
+				<h1 className="py-20 md:py-32 text-5xl text-green text-center">
+					Contact
+				</h1>
 				<div className="mt-10 sm:mt-0">
-					<div className="md:grid md:grid-cols-2 md:gap-6">
-						<div className="md:col-span-1">
+					<div className="md:grid md:grid-cols-3 md:gap-6">
+						<div className="md:col-span-1 flex items-center">
 							<div className="px-4 sm:px-0">
-								<h3 className="text-lg font-medium leading-6 text-gray-900">
+								<h3 className="text-lg font-medium leading-6 text-green">
 									Send us a message
 								</h3>
-								<p className="mt-1 text-sm text-gray-600">
+								<p className="mt-1 text-sm text-green">
 									Use a permanent address where you can receive mail.
 								</p>
 							</div>
@@ -71,7 +74,7 @@ const Contact = () => {
 											<div className="col-span-12">
 												<label
 													htmlFor="from_name"
-													className="block text-sm font-medium text-gray-700"
+													className="block text-sm font-medium text-green"
 												>
 													Full Name
 												</label>
@@ -88,7 +91,7 @@ const Contact = () => {
 											<div className="md:col-span-6 col-span-12 ">
 												<label
 													htmlFor="email-address"
-													className="block text-sm font-medium text-gray-700"
+													className="block text-sm font-medium text-green"
 												>
 													Email address
 												</label>
@@ -106,7 +109,7 @@ const Contact = () => {
 											<div className="md:col-span-6 col-span-12 ">
 												<label
 													htmlFor="phone"
-													className="block text-sm font-medium text-gray-700"
+													className="block text-sm font-medium text-green"
 												>
 													phone
 												</label>
@@ -123,7 +126,7 @@ const Contact = () => {
 												<div>
 													<label
 														htmlFor="message"
-														className="block text-sm font-medium text-gray-700"
+														className="block text-sm font-medium text-green"
 													>
 														Message
 													</label>
@@ -149,7 +152,7 @@ const Contact = () => {
 											{/* <div className="md:col-span-6 col-span-12">
 												<label
 													htmlFor="country"
-													className="block text-sm font-medium text-gray-700"
+													className="block text-sm font-medium text-green"
 												>
 													Country
 												</label>
@@ -177,7 +180,7 @@ const Contact = () => {
 									<div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
 										<button
 											type="submit"
-											className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#CFAC9F] hover:bg-stone-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#CFAC9F]"
+											className="inline-flex justify-center py-2 px-4 border border-green shadow-sm text-sm font-medium rounded-md text-green bg-transparent hover:scale-110  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green"
 										>
 											Send Message
 										</button>
