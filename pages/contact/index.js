@@ -2,8 +2,6 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Layout from '@components/Layout';
 
-import { Container } from '@mui/system';
-
 const Contact = () => {
 	const [postMessage, setPostMessage] = useState({
 		from_name: '',
@@ -52,7 +50,7 @@ const Contact = () => {
 
 	return (
 		<Layout title="Contact">
-			<Container>
+			<div className="px-12">
 				<div className="mt-10 sm:mt-0">
 					<div className="md:grid md:grid-cols-2 md:gap-6">
 						<div className="md:col-span-1">
@@ -189,7 +187,7 @@ const Contact = () => {
 						</div>
 					</div>
 				</div>
-			</Container>
+			</div>
 		</Layout>
 	);
 };
