@@ -6,7 +6,7 @@ import { PortableText } from '@portabletext/react';
 const About = ({ page }) => {
 	console.log(page[0]);
 	return (
-		<Layout>
+		<Layout title="About">
 			<h1 className="py-20 md:py-32 text-5xl text-green text-center">
 				{page[0].title}
 			</h1>

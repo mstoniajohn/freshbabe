@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 import EventCard from '../components/parts/EventCard';
+
+import sanity from '../lib/sanity';
 import { motion } from 'framer-motion';
 import { TbArrowBottomCircle } from 'react-icons/tb';
 import client from '../lib/sanity';
