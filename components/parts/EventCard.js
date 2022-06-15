@@ -3,6 +3,12 @@ import { getDate, urlFor } from '../../utils/getImageUrl';
 import { RSVPInput } from './RSVPInput';
 import { PortableText } from '@portabletext/react';
 import Link from 'next/link';
+// import { IoLocationOutline } from 'react-icons/';
+import {
+	CalendarIcon,
+	ClockIcon,
+	LocationMarkerIcon,
+} from '@heroicons/react/outline';
 
 const EventCard = ({
 	title = '',
@@ -12,6 +18,7 @@ const EventCard = ({
 	date = '',
 	time = '',
 	slug = '',
+	location = '',
 }) => {
 	return (
 		<div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden lg:max-w-2xl text-[#fff]">
@@ -35,10 +42,22 @@ const EventCard = ({
 							</div>
 						</a>
 					</Link>
+					<div className="flex space-x-2 items-center">
+						<LocationMarkerIcon className="h-4 text-green" />
+						<p className="text-gray-light">{location}</p>
+					</div>
+					<div className="flex md:space-x-4 space-x-3 items-center">
+						<div className="flex items-center space-x-2">
+							<CalendarIcon className="h-4 text-green" />
+							<span>{getDate(date)}</span>
+						</div>
 
-					<p className="text-gray">
-						<span>{getDate(date)}</span> at <span>{time}</span>
-					</p>
+						<div className="text-gray-light flex items-center space-x-2">
+							<ClockIcon className="h-4 text-green" />
+							<span> {time}</span>
+						</div>
+					</div>
+
 					{/* TODO: Link to event page? */}
 					<a
 						href="#"
