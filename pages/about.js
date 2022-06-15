@@ -10,7 +10,7 @@ const About = ({ page }) => {
 			<h1 className="py-20 md:py-32 text-5xl text-green text-center">
 				{page[0].title}
 			</h1>
-			<div className="px-12 h-screen text-gray-light">
+			<div className="px-12 mx-auto h-screen text-gray-light">
 				<PortableText value={page[0].content} />
 			</div>
 		</Layout>

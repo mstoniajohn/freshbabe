@@ -50,7 +50,7 @@ const Contact = () => {
 
 	return (
 		<Layout title="Contact">
-			<div className="px-12 h-screen">
+			<div className="px-12 h-screen mx-auto pb-20">
 				<h1 className="py-20 md:py-32 text-5xl text-green text-center">
 					Contact
 				</h1>
