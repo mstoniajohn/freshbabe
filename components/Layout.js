@@ -16,18 +16,19 @@ const Layout = ({ children, title }) => {
 			</Head>
 			<Header />
 			<main className="bg-[#000000] h-full z-0">{children}</main>
-			{/* <footer>
+			<footer>
 				<a
-					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+					href="https://www.toniaroganti.com/"
 					target="_blank"
 					rel="noopener noreferrer"
+					className="text-gray"
 				>
-					All Events by
+					Site created by Tonia Roganti
 					<span>
 						<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
 					</span>
 				</a>
-			</footer> */}
+			</footer>
 		</div>
 	);
 };
