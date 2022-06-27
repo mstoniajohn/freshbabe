@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useRouter } from 'next/router';
+import { toast } from 'react-toastify';
 
 export const RSVPInput = ({ event }) => {
 	const router = useRouter();
@@ -35,6 +36,7 @@ export const RSVPInput = ({ event }) => {
 				}
 			);
 		setEmailAddress('');
+		toast("Thank you! Can't wait to see you there!");
 	};
 	return (
 		<form onSubmit={sendEmail}>
