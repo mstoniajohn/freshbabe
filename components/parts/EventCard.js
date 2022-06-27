@@ -21,7 +21,7 @@ const EventCard = ({
 	location = '',
 }) => {
 	return (
-		<Link href={`events/${slug}`}>
+		// <Link href={`events/${slug}`}>
 			<div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden lg:max-w-2xl text-[#fff]">
 				<div className="flex flex-col lg:flex-row">
 					<div className="lg:shrink-0">
@@ -76,7 +76,7 @@ const EventCard = ({
 					</div>
 				</div>
 			</div>
-		</Link>
+		{/* </Link> */}
 	);
 };
 
