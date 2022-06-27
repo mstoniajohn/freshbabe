@@ -16,12 +16,12 @@ const Layout = ({ children, title }) => {
 			</Head>
 			<Header />
 			<main className="bg-[#000000] h-full z-0">{children}</main>
-			<footer>
+			<footer className=" bg-[#000000] text-center pt-40">
 				<a
 					href="https://www.toniaroganti.com/"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-gray"
+					className="text-gray mx-auto mb-10"
 				>
 					Site created by Tonia Roganti
 					<span>

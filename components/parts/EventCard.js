@@ -66,9 +66,11 @@ const EventCard = ({
 						>
 							{subtitle}
 						</a>
-						{/* <div className="mt-2 mb-4 text-slate-500">
-							<PortableText value={info} />
-						</div> */}
+						<div className="mt-2 mb-4 text-slate-500 font-bold text-[#dfff94]">
+							{/* <PortableText value={info.substring(0, 200)} /> */}
+
+							<Link href={`events/${slug}`}>...read more about this event</Link>
+						</div>
 
 						<RSVPInput event={title} />
 					</div>
