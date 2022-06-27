@@ -18,6 +18,15 @@ export const RSVPInput = ({ event }) => {
 
 	const sendEmail = (e) => {
 		e.preventDefault();
+		toast("Thank you! Can't wait to see you there!", {
+			position: 'top-right',
+			autoClose: 5000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+		});
 
 		emailjs
 			.send(
@@ -29,21 +38,15 @@ export const RSVPInput = ({ event }) => {
 			.then(
 				(result) => {
 					console.log(result.text);
-					router.reload();
+					// router.reload();
 				},
 				(error) => {
 					console.log(error.text);
 				}
 			);
-		setEmailAddress('');
-		toast("Thank you! Can't wait to see you there!", {
-			position: 'top-right',
-			autoClose: 5000,
-			hideProgressBar: false,
-			closeOnClick: true,
-			pauseOnHover: true,
-			draggable: true,
-			progress: undefined,
+		setEmailAddress({
+			from_email: '',
+			event: null,
 		});
 	};
 	return (
