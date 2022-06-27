@@ -36,7 +36,15 @@ export const RSVPInput = ({ event }) => {
 				}
 			);
 		setEmailAddress('');
-		toast("Thank you! Can't wait to see you there!");
+		toast("Thank you! Can't wait to see you there!", {
+			position: 'top-right',
+			autoClose: 5000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+		});
 	};
 	return (
 		<form onSubmit={sendEmail}>
