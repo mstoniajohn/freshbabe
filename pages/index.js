@@ -26,7 +26,7 @@ export default function Home({ events = [] }) {
 					Events
 				</h2>
 
-				<div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+				<div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
 					{events &&
 						events?.map(
 							({ title, info, time, date, image, location, slug }) => (

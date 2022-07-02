@@ -22,12 +22,12 @@ const EventCard = ({
 }) => {
 	return (
 		<div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden lg:max-w-2xl text-[#fff]">
-			<div className="flex flex-col lg:flex-row">
-				<div className="lg:shrink-0">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
+				<div className="">
 					<Link href={`events/${slug}`}>
 						<a className="cursor-pointer">
 							<img
-								className="h-48 w-full object-cover lg:h-full lg:w-48"
+								className=" object-cover"
 								src={image !== '' && urlFor(image)}
 								alt="Fresh Babe Events"
 							/>
@@ -43,8 +43,8 @@ const EventCard = ({
 						</a>
 					</Link>
 					<div className="flex space-x-2 items-center">
-						<LocationMarkerIcon className="h-4 text-green" />
-						<p className="text-gray-light">{location}</p>
+						<LocationMarkerIcon className="h-4 w-4 text-green" />
+						<p className="text-gray-light text-sm">{location}</p>
 					</div>
 					<div className="flex md:space-x-4 space-x-3 items-center">
 						<div className="flex items-center space-x-2">
