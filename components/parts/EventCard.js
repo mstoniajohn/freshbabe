@@ -43,18 +43,18 @@ const EventCard = ({
 						</a>
 					</Link>
 					<div className="flex space-x-2 items-center">
-						<LocationMarkerIcon className="h-4 w-4 text-green" />
+						<LocationMarkerIcon className="shrink-0 h-4 w-4 text-green" />
 						<p className="text-gray-light text-sm">{location}</p>
 					</div>
 					<div className="flex md:space-x-4 space-x-3 items-center">
 						<div className="flex items-center space-x-2">
 							<CalendarIcon className="h-4 text-green" />
-							<span>{getDate(date)}</span>
+							<span className="text-sm text-gray-light">{getDate(date)}</span>
 						</div>
 
 						<div className="text-gray-light flex items-center space-x-2">
 							<ClockIcon className="h-4 text-green" />
-							<span> {time}</span>
+							<span className="text-sm"> {time}</span>
 						</div>
 					</div>
 
