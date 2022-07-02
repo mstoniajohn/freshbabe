@@ -32,11 +32,11 @@ const SingleEvent = ({ event }) => {
 					<div className="pb-20 pt-10">
 						{event && (
 							<div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden lg:max-w-2xl text-[#fff]">
-								<div className="flex flex-col">
-									<div className="lg:shrink-0">
-										<a className="cursor-pointer">
+								<div className="grid grid-cols-1 gap-4">
+									<div className="shrink-0">
+										<a className="cursor-pointer flex justify-center">
 											<img
-												className="object-cover w-full h-72"
+												className="object-fit w-[70%]"
 												src={event.image !== '' && urlFor(event.image)}
 												alt="Fresh Babe Events"
 											/>
