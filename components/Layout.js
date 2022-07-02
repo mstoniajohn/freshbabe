@@ -34,22 +34,14 @@ const Layout = ({ children, title }) => {
 					</a>
 					&copy; All Rights Reserved. 2022
 				</div>
-				<div>
+				<div className="flex justify-center">
 					<a
 						href="https://www.toniaroganti.com/"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="text-gray-dark mt-4"
+						className="text-gray-dark mt-4 r"
 					>
-						Site created by Tonia Roganti
-						<span>
-							<Image
-								src="/vercel.svg"
-								alt="Vercel Logo"
-								width={72}
-								height={16}
-							/>
-						</span>
+						<span>Site created by Tonia Roganti</span>
 					</a>
 				</div>
 			</footer>
