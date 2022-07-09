@@ -15,13 +15,15 @@ import Layout from '../../components/Layout';
 import EventCard from '../../components/parts/EventCard';
 import sanity from '../../lib/sanity';
 
+import { SRLWrapper, useLightbox } from 'simple-react-lightbox';
 const SingleEvent = ({ event }) => {
 	const router = useRouter();
+	const { openLightbox, closeLightbox } = useLightbox();
 	const prev = router.back;
 
 	console.log(event, event?.image?.url);
 	return (
-		<Layout>
+		<Layout title={event?.title}>
 			<ContainerDiv>
 				<div className="pt-10">
 					<Link href="/">
@@ -34,13 +36,21 @@ const SingleEvent = ({ event }) => {
 							<div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden lg:max-w-2xl text-[#fff]">
 								<div className="grid grid-cols-1 gap-4">
 									<div className="shrink-0">
-										<a className="cursor-pointer flex justify-center">
+										<SRLWrapper>
+											<a href={event.image !== '' && urlFor(event.image)}>
+												<img
+													src={event.image !== '' && urlFor(event.image)}
+													alt="Plant Swap | Fresh Babe"
+												/>
+											</a>
+										</SRLWrapper>
+										{/* <a className="cursor-pointer flex justify-center">
 											<img
 												className="object-fit w-[70%]"
 												src={event.image !== '' && urlFor(event.image)}
 												alt="Fresh Babe Events"
 											/>
-										</a>
+										</a> */}
 									</div>
 									<div className="py-3 md:p-6">
 										<a className="cursor-pointer">
