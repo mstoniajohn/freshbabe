@@ -36,14 +36,11 @@ const SingleEvent = ({ event }) => {
 							<div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden lg:max-w-2xl text-[#fff]">
 								<div className="grid grid-cols-1 gap-4">
 									<div className="shrink-0">
-										<SRLWrapper>
-											<a href={event.image !== '' && urlFor(event.image)}>
-												<img
-													src={event.image !== '' && urlFor(event.image)}
-													alt="Plant Swap | Fresh Babe"
-												/>
-											</a>
-										</SRLWrapper>
+										<img
+											src={event.image !== '' && urlFor(event.image)}
+											alt="Plant Swap | Fresh Babe"
+										/>
+
 										{/* <a className="cursor-pointer flex justify-center">
 											<img
 												className="object-fit w-[70%]"
@@ -126,6 +123,7 @@ export const getStaticProps = async ({ params }) => {
 		props: {
 			event,
 		},
+		revalidate: 1,
 	};
 };
 

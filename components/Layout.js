@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { TbBrandInstagram } from 'react-icons/tb';
 import { ToastContainer } from 'react-toastify';
@@ -14,10 +15,29 @@ const Layout = ({ children, title }) => {
 					name="description"
 					content="Bringing you the best events to any city"
 				/>
-				<link rel="icon" href="/favicon.ico" className="rounded-full" />
+				<link
+					rel="icon"
+					href="/FRESH_BABE_RGB_TRANSPARENT.png"
+					className="rounded-full h-8 w-8 "
+				/>
 			</Head>
 			<Header />
+
 			<ToastContainer />
+			<Link href="/" passHref>
+				<a className=" flex items-center justify-center">
+					<img
+						className="block md:hidden h-8 "
+						src="/FRESH_BABE_RGB_TRANSPARENT.png"
+						alt="FreshBabe"
+					/>
+					<img
+						className="hidden md:block h-20"
+						src="/FRESH_BABE_RGB_TRANSPARENT.png"
+						alt="FreshBabe"
+					/>{' '}
+				</a>
+			</Link>
 
 			<main className="bg-[#000000] h-full z-0">{children}</main>
 			<footer className="bg-[#000000] text-center pt-40 flex flex-col space-y-4 justify-center items-center">

@@ -27,7 +27,7 @@ const EventCard = ({
 					<Link href={`events/${slug}`}>
 						<a className="cursor-pointer">
 							<img
-								className=" object-cover"
+								className="object-cover"
 								src={image !== '' && urlFor(image)}
 								alt="Fresh Babe Events"
 							/>
