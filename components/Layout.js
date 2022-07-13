@@ -27,7 +27,7 @@ const Layout = ({ children, title }) => {
 			<Link href="/" passHref>
 				<a className=" flex items-center justify-center">
 					<img
-						className="block md:hidden h-8 "
+						className="block md:hidden h-12 "
 						src="/FRESH_BABE_RGB_TRANSPARENT.png"
 						alt="FreshBabe"
 					/>
