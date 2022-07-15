@@ -1,3 +1,4 @@
+import EventMap from '@components/EventMap';
 import { RSVPInput } from '@components/parts/RSVPInput';
 import {
 	ArrowLeftIcon,
@@ -12,16 +13,12 @@ import React from 'react';
 import { getDate, urlFor } from 'utils/getImageUrl';
 import ContainerDiv from '../../components/ContainerDiv';
 import Layout from '../../components/Layout';
-import EventCard from '../../components/parts/EventCard';
+
 import sanity from '../../lib/sanity';
 
-import { SRLWrapper, useLightbox } from 'simple-react-lightbox';
 const SingleEvent = ({ event }) => {
 	const router = useRouter();
-	const { openLightbox, closeLightbox } = useLightbox();
-	const prev = router.back;
 
-	console.log(event, event?.image?.url);
 	return (
 		<Layout title={event?.title}>
 			<ContainerDiv>
@@ -95,6 +92,7 @@ const SingleEvent = ({ event }) => {
 								</div>
 							</div>
 						)}
+						<EventMap location={event.location} id={event.id} />
 					</div>
 				</div>
 			</ContainerDiv>

@@ -18,7 +18,7 @@ const Layout = ({ children, title }) => {
 				<link
 					rel="icon"
 					href="/FRESH_BABE_RGB_TRANSPARENT.png"
-					className="rounded-full h-8 w-8 "
+					className=" h-6 "
 				/>
 			</Head>
 			<Header />
