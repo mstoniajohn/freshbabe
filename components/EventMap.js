@@ -7,7 +7,7 @@ import { FaLess, FaMapPin } from 'react-icons/fa';
 Geocode.setApiKey(process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY);
 // set response language. Defaults to english.
 Geocode.setLanguage('en');
-export default function EventMap({ location, id }) {
+export default function EventMap({ event }) {
 	const [lat, setLat] = useState(null);
 	const [lng, setLng] = useState(null);
 	const [loading, setLoading] = useState(true);
@@ -19,7 +19,7 @@ export default function EventMap({ location, id }) {
 		height: '500px',
 	});
 	useEffect(() => {
-		Geocode.fromAddress(location).then(
+		Geocode.fromAddress(event.location).then(
 			(response) => {
 				const { lat, lng } = response.results[0].geometry.location;
 				console.log(lat, lng);
@@ -53,7 +53,7 @@ export default function EventMap({ location, id }) {
 				mapStyle="mapbox://styles/mapbox/streets-v9"
 				onViewportChange={(vp) => setViewport(vp)}
 			>
-				<Marker key={id} latitude={lat} longitude={lng}>
+				<Marker key={event.id} latitude={lat} longitude={lng}>
 					<FaMapPin className="text-green-700 text-3xl font-bold" />
 				</Marker>
 			</Map>

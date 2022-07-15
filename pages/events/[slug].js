@@ -49,14 +49,14 @@ const SingleEvent = ({ event }) => {
 									<div className="py-3 md:p-6">
 										<a className="cursor-pointer">
 											<div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-												<h1 className="text-2xl my-3">{event.title}</h1>
+												<h1 className="text-2xl my-3">{event?.title}</h1>
 											</div>
 										</a>
 
 										<div className="flex space-x-2 items-center my-2">
 											<LocationMarkerIcon className="h-5 text-green" />
 											<p className="text-gray-light text-md">
-												{event.location}
+												{event?.location}
 											</p>
 										</div>
 										<div className="flex md:space-x-4 space-x-3 items-center">
@@ -92,7 +92,7 @@ const SingleEvent = ({ event }) => {
 								</div>
 							</div>
 						)}
-						<EventMap location={event.location} id={event.id} />
+						<EventMap event={event} />
 					</div>
 				</div>
 			</ContainerDiv>
