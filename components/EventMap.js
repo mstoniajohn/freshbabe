@@ -49,7 +49,7 @@ export default function EventMap({ event }) {
 					zoom: 12,
 				}}
 				onMove={(evt) => setViewState(evt.viewState)}
-				style={{ width: 600, height: 400, margin: '10px auto' }}
+				style={{ maxWidth: 400, height: 300, margin: '10px auto' }}
 				mapStyle="mapbox://styles/mapbox/streets-v9"
 				onViewportChange={(vp) => setViewport(vp)}
 			>
