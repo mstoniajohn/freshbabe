@@ -39,7 +39,7 @@ export default function EventMap({ event }) {
 	console.log(lat, lng);
 
 	return (
-		<div className="mx-auto">
+		<div className="max-w-md w-full mt-10">
 			<Map
 				{...viewport}
 				mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN}
