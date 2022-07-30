@@ -56,7 +56,7 @@ export default function Home({ events = [] }) {
 						</div>
 					</div>
 				) : (
-					<h2 className="text-2xl text-center text-gray-light my-7">
+					<h2 id="events" className="text-2xl text-center text-gray-light my-7">
 						No upcoming events. New events are posted often so check back with
 						us.
 					</h2>
