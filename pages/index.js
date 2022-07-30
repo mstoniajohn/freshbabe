@@ -30,16 +30,14 @@ export default function Home({ events = [] }) {
 				</div>
 				{upcomingEvents.length > 0 ? (
 					<div className="container mx-auto space-y-5">
-						{/* <hr className="text-green opacity-50" />  */}
-
 						<h2
-							id="pastEvents"
+							id="events"
 							className="text-2xl text-center text-gray-light my-7"
 						>
 							Events
 						</h2>
 
-						<div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+						<div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
 							{upcomingEvents &&
 								upcomingEvents?.map(
 									({ title, info, time, date, image, location, slug }) => (
@@ -58,19 +56,16 @@ export default function Home({ events = [] }) {
 						</div>
 					</div>
 				) : (
-					<h2
-						id="pastEvents"
-						className="text-2xl text-center text-gray-light my-7"
-					>
+					<h2 className="text-2xl text-center text-gray-light my-7">
 						No upcoming events. New events are posted often so check back with
 						us.
 					</h2>
 				)}
 
-				<div className="text-center py-10 space-y-10">
-					<h1 className="text-[#dfff94] text-3xl">Past Events</h1>
+				<div className=" py-10 space-y-10">
+					<h1 className="text-[#dfff94] text-3xl text-center">Past Events</h1>
 					{oldEvents.length > 0 && (
-						<div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+						<div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
 							{oldEvents &&
 								oldEvents?.map(
 									({ title, info, time, date, image, location, slug }) => (
